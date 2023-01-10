@@ -22,4 +22,8 @@ public class Personaje : MonoBehaviour
             rigidbody.AddForce(Vector2.up * salto);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 }
