@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
   animator: {fileID: 0}
-  salto: 400
+  salto: 500
 --- !u!61 &2065925770
 BoxCollider2D:
   m_ObjectHideFlags: 0

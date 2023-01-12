@@ -20,10 +20,11 @@ public class Personaje : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             rigidbody.AddForce(Vector2.up * salto);
+            animator.SetBool("Saltar", true);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        animator.SetBool("Saltar", false);
     }
 }
