@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     }
     public void ActualizarPuntuacion()
     {
-        puntuacionActual += puntuacionActual;
+        puntuacionActual += 1;
         if (puntuacionActual > puntuacionMaxima)
         {
             puntuacionMaxima = puntuacionActual;
