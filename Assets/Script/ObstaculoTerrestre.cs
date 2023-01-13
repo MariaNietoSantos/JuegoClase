@@ -30,12 +30,12 @@ public class ObstaculoTerrestre : MonoBehaviour
         else
         {
             transform.position = posicionIkk;
-            velocidad = velocidad + 2;
+            velocidad = velocidad + 0.5f;
         }
 
         if (velocidad == 22)
         {
-            velocidad = velocidad - 2;
+            velocidad = velocidad - 0.5f;
         }
     }
 }
