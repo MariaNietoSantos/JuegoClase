@@ -33,7 +33,7 @@ public class ObstaculoTerrestre : MonoBehaviour
             velocidad = velocidad + 2;
         }
 
-        if (velocidad = 202)
+        if (velocidad == 22)
         {
             velocidad = velocidad - 2;
         }
