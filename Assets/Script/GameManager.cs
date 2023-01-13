@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] int puntuacionActual;
-    [SerializeField] int puntuacionMaxima;
-    [SerializeField] float tiempo;
+    [SerializeField] public int puntuacionActual;
+    [SerializeField] public int puntuacionMaxima;
+    [SerializeField] public float tiempo;
+    public static GameManager Instancia;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+    private void Awake()
+    {
+        if (Instancia == null)
+        {
+            Instancia = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+       puntuacionMaxima = PlayerPrefs.GetInt("PuntuacionMaxima");
     }
     public void Perder()
     {
