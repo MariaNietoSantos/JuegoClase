@@ -7,18 +7,27 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int puntuacionActual;
     [SerializeField] public int puntuacionMaxima;
     [SerializeField] public float tiempo;
+    [SerializeField] GameObject gameOver;
+    [SerializeField] GameObject boton;
+    [SerializeField] GameObject jugador;
+    [SerializeField] GameObject enemigo;
+    [SerializeField] bool cronometro;
     public static GameManager Instancia;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameOver.SetActive(false);
+        boton.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (cronometro)
+        {
+            tiempo += Time.deltaTime;
+        }
     }
     private void Awake()
     {
@@ -35,11 +44,21 @@ public class GameManager : MonoBehaviour
     }
     public void Perder()
     {
-        
+        jugador.SetActive(false);
+        enemigo.SetActive(false);
+        gameOver.SetActive(true);
+        boton.SetActive(true);
+        cronometro = false;
     }
     public void ReiniciarJuego()
     {
         puntuacionActual = 0;
+        jugador.SetActive(true);
+        enemigo.SetActive(true);
+        gameOver.SetActive(false);
+        boton.SetActive(false);
+        tiempo = 0;
+        cronometro = true;
 
     }
     public void ActualizarPuntuacion()
