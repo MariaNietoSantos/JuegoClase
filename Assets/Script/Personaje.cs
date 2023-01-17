@@ -23,6 +23,7 @@ public class Personaje : MonoBehaviour
         {
             rigidbody.AddForce(Vector2.up * salto);
             animator.SetBool("Saltar", true);
+            sonido.clip = sonidos[1]; sonido.Play();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

@@ -1461,7 +1461,7 @@ MonoBehaviour:
   salto: 500
   sonidos:
   - {fileID: 8300000, guid: 90649a8cb5f581840be43980d90feb21, type: 3}
-  - {fileID: 8300000, guid: 90649a8cb5f581840be43980d90feb21, type: 3}
+  - {fileID: 8300000, guid: 80d2c8ec7a815444ba1a67975809c0b9, type: 3}
   sonido: {fileID: 2065925772}
 --- !u!61 &2065925770
 BoxCollider2D:
