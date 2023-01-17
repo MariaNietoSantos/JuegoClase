@@ -38,4 +38,9 @@ public class ObstaculoTerrestre : MonoBehaviour
             velocidad = velocidad - 0.5f;
         }
     }
+    public void ReiniciarEnemigo()
+    {
+        transform.position = posicionIkk;
+        velocidad = 1;
+    }
 }
