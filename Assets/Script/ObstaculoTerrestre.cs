@@ -41,6 +41,6 @@ public class ObstaculoTerrestre : MonoBehaviour
     public void ReiniciarEnemigo()
     {
         transform.position = posicionIkk;
-        velocidad = 1;
+        velocidad = 5; //ARREGLAR ESTO
     }
 }
