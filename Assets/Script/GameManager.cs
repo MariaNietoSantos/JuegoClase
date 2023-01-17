@@ -35,10 +35,11 @@ public class GameManager : MonoBehaviour
     }
     public void Perder()
     {
-
+        
     }
     public void ReiniciarJuego()
     {
+        puntuacionActual = 0;
 
     }
     public void ActualizarPuntuacion()

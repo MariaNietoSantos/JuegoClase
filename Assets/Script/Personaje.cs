@@ -7,6 +7,8 @@ public class Personaje : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbody;
     [SerializeField] Animator animator;
     [SerializeField] float salto;
+    [SerializeField] AudioClip[] sonidos;
+    [SerializeField] private AudioSource sonido;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class Personaje : MonoBehaviour
         animator.SetBool("Saltar", false);
         if (collision.transform.tag == "Perder")
         {
+            sonido.clip = sonidos[0]; sonido.Play();
             GameManager.Instancia.ReiniciarJuego();
         }
     }
