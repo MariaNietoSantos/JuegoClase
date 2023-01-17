@@ -32,7 +32,7 @@ public class Personaje : MonoBehaviour
         if (collision.transform.tag == "Perder")
         {
             sonido.clip = sonidos[0]; sonido.Play();
-            GameManager.Instancia.ReiniciarJuego();
+            GameManager.Instancia.Perder();
         }
     }
 }

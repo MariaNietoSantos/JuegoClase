@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject jugador;
     [SerializeField] GameObject enemigo;
     [SerializeField] bool cronometro;
+    [SerializeField] ObstaculoTerrestre obstaculo;
     public static GameManager Instancia;
 
     // Start is called before the first frame update
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
         boton.SetActive(false);
         tiempo = 0;
         cronometro = true;
-
+        obstaculo.ReiniciarEnemigo();
     }
     public void ActualizarPuntuacion()
     {

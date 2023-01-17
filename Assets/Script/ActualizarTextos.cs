@@ -6,6 +6,7 @@ using UnityEngine;
 public class ActualizarTextos : MonoBehaviour
 {
     [SerializeField] TMP_Text puntuacionActual, puntuacionMaxima;
+    [SerializeField] TMP_Text tiempo;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +18,6 @@ public class ActualizarTextos : MonoBehaviour
     {
         puntuacionActual.text = GameManager.Instancia.puntuacionActual.ToString();
         puntuacionMaxima.text = GameManager.Instancia.puntuacionMaxima.ToString();
+        tiempo.text = GameManager.Instancia.tiempo.ToString();
     }
 }
