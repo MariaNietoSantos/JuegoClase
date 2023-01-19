@@ -31,7 +31,7 @@ public class Personaje : MonoBehaviour
         animator.SetBool("Saltar", false);
         if (collision.transform.tag == "Perder")
         {
-            sonido.clip = sonidos[0]; sonido.Play();
+            
             GameManager.Instancia.Perder();
         }
     }

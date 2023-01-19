@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject enemigo;
     [SerializeField] bool cronometro;
     [SerializeField] ObstaculoTerrestre obstaculo;
+    [SerializeField] AudioClip[] sonidos;
+    [SerializeField] private AudioSource sonido;
     public static GameManager Instancia;
 
     // Start is called before the first frame update
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
     }
     public void Perder()
     {
+        sonido.clip = sonidos[0]; sonido.Play();
         jugador.SetActive(false);
         enemigo.SetActive(false);
         gameOver.SetActive(true);
@@ -71,4 +74,6 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("PuntuacionMaxima", puntuacionMaxima);
         }
     }
+
+
 } 
