@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         if (puntuacionActual > puntuacionMaxima)
         {
             puntuacionMaxima = puntuacionActual;
-            PlayerPrefs.SetInt("mejorPuntuacion", puntuacionMaxima);
+            PlayerPrefs.SetInt("PuntuacionMaxima", puntuacionMaxima);
         }
     }
 } 
