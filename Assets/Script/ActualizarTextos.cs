@@ -18,6 +18,7 @@ public class ActualizarTextos : MonoBehaviour
     {
         puntuacionActual.text = GameManager.Instancia.puntuacionActual.ToString();
         puntuacionMaxima.text = GameManager.Instancia.puntuacionMaxima.ToString();
-        tiempo.text = GameManager.Instancia.tiempo.ToString();
+        int segundos = (int)GameManager.Instancia.tiempo;
+        tiempo.text = segundos.ToString();
     }
 }
